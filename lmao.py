@@ -247,6 +247,161 @@
 #            'China':'Beijing',
 #            'Russia':'Moscow'}
 
-#print(capitals['Russia'])               #instead of calling an index, call the key to recieve definition
+#print(capitals['Russia'])                #instead of calling an index, call the key to recieve definition
+#print(capitals.get('Germany'))           #get method is a way to check if a value is there w/o getting errors
+#print (capitals.keys())                  #all keys in order of listing in og definition
+#print (capitals.values())                #values in order of listing in og dictionary definition
+#print (capitals.items())                
 
-#print(capitals.get('Germany'))          #get method is a way to check if a value is there w/o getting errors
+#capitals.update({'Germany':'Berlin'})    # adds in the updated values to dictionary
+#capitals.update({'USA':'Las Vegas'})     # will update value to existing key, keeping it in the same insertion order
+#capitals.pop('China')                    # removes the key;value pair from the dictionary 
+#capitals.clear()                         #self-explanatory; clears the entire dictionary
+
+#for key, value in capitals.items():      #loop to iterate through all key value pairs and print them
+#    print (key,value)
+
+#----------------------------------------------------------------------------------------------------------------------
+# index operator [] = gives access to a sequence's element (str, list, tuples)
+
+#name = "Vedant Talati"
+
+#if (name[0].isupper()):
+#    name = name.lower()
+
+#first_name= name[:6].upper()
+#last_name = name[-6:].upper()
+#print (last_name)
+
+#----------------------------------------------------------------------------------------------------------------------
+#function = a block of code which is executed only when it is called
+
+#def repeat(name, age):
+#    print("hello "+name+". You are "+str(age)+" years old.")
+
+#repeat("Vedant",16 )
+
+#---------------------------------------------------------------------------------------------------------------------
+#return statement = functions that send values/objects back to the caller.
+
+#def mult(int1, int2):
+#    lol = int1 * int2
+#    return lol
+#print (mult(2,8))
+
+#---------------------------------------------------------------------------------------------------------------------
+#keyword args = args preceded by an identifier when we pass them to a function
+#               The order of the args doesn't matter, unlike positional args
+#               Python knows the nmames of the arguments that the function recieves
+
+#def i(f, m, l):
+#    print ("hello" + f+m+l)
+
+#i(m="j",l= "t", f="v")
+
+#---------------------------------------------------------------------------------------------------------------------
+#nested function calls = function calls inside other function calls
+
+#num = float(input("enter a whole positive number: "))
+#num = abs(num)
+#num = round(num)
+#print (num)
+
+#num = print(round(abs(float(input("enter ur number pls: ")))))
+
+#---------------------------------------------------------------------------------------------------------------------
+# scope = the region in which a varibale is recognized
+#         A variable is only available in the region in which it is created
+#         A global and locally scoped versions of a var can be created
+
+#name = "taarimummy"         # global variable --> accessible within a function too
+#def disp_name():
+#    name = "urmom"          #var only available within this f(x) --> local scope
+#    return name
+#
+#print(name)
+#print (disp_name())
+
+#---------------------------------------------------------------------------------------------------------------------
+# *args = parameter that will pack all arguments into a tuple
+#         useful so that a function can accept a varying amount of arguments
+
+#def add(*numbers):
+#    sum = 0
+#    numbers = list(numbers)
+#    numbers[2] = 0
+#    for i in numbers:
+#        sum+=i
+#    return sum
+
+#print(add(2,3,4,5,23,23,4,43))
+
+#---------------------------------------------------------------------------------------------------------------------
+# **kwargs = like *args, except stuff gets packed into a dictionary 
+#            useful so tyhat a function can accept a varying amount of keywords args
+
+#def hello(**lol):
+    #print("hello "+lol['f'])
+#    print ("Hello ", end = " ")
+#    for k,v in lol.items():
+#        print (v, end = " ")
+
+#hello(f ="Vedant", m="J", l="Talati")
+
+#---------------------------------------------------------------------------------------------------------------------
+# str.format() = optional method that gives users more control when displaying output
+
+#animals = "cow"
+#item = "moon"
+
+#print ("The "+animals+" jumped over the "+item)
+#print ("The {} jumped over the {}".format(animals,item))
+#print ("The {1} jumped over the {0}".format(animals,item))        #positional args can also be used by specifiying index
+
+#text = "The {} jumped over the {}"
+#print (text.format(animals, item))
+
+#name = "vedant"
+
+#print("Hello my name is {}".format(name))
+#print("Hello my name is {:10}. Nice to meet you".format(name))     # adds padding after the var
+#print("Hello my name is {:<10}".format(name))                      # adds paddiing after var
+#print("Hello my name is {:>10}".format(name))                      # adds padding before var
+#print("Hello my name is {:^10}".format(name))                      #center aligns your var within the padding
+
+#number = 3214159.43333
+#print("pi={:0.2f}".format(number))                                 #only displays the number until the x-th float specified after the colon
+#print("pi={:,}".format(number))                                    #displays a comma for thousands, millions, billions, etc. place
+#print("pi={:b}".format(number))                                    #binary display of the var 
+
+#---------------------------------------------------------------------------------------------------------------------
+# generating random numbers
+
+#import random
+
+#x = random.randint(1,6)                           # random ints within specified range
+#y= (random.random()*100)-50                       # range of random floats between -50 and 50
+
+
+
+#while y<0:                                        #while loop to only print the + values only
+#    y = (random.random()*100)-50
+#    if y>0: 
+#        pass
+#    else:
+#        y=-1
+
+#print (y)
+#print (x)
+
+#myList = ['rock','paper','scissors']
+#z = random.choice(myList)
+
+#print (z)
+
+#cards = [1,2,3,4,5,6,7,8,9,"J","Q","K","A"]
+
+#random.shuffle(cards)
+
+#----------------------------------------------------------------------------------------------------------------------------------------------
+
