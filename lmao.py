@@ -375,7 +375,7 @@
 #print("pi={:b}".format(number))                                    #binary display of the var 
 
 #---------------------------------------------------------------------------------------------------------------------
-# generating random numbers
+#29 generating random numbers
 
 #import random
 
@@ -404,4 +404,77 @@
 #random.shuffle(cards)
 
 #----------------------------------------------------------------------------------------------------------------------------------------------
+
+#30 exception = events dtected during execution that interrupt the flow of a program
+
+#try: 
+#    numerator = int(input('enter a number to divide: '))
+#    denominator = int(input('enter a number to divide by; '))
+#    quotient = numerator/denominator
+
+#except ZeroDivisionError as e:
+#    print(e)
+#    print ("You cannot divide by 0")
+#except ValueError as e :
+#    print(e)
+#    print("try again bruh only use numbers")
+#except Exception as e:
+    #print ("something went wrong") 
+#else: 
+#    print (quotient)
+#finally:
+#    print('this will always execute')
+
+#----------------------------------------------------------------------------------------------------------------------------------------------
+#file detection
+
+#import os
+
+#path = "C:\\Users\\vedan\\OneDrive\\Desktop\\test.txt"
+
+#if os.path.exists(path):
+#    print('exists')
+#else:
+#    print("DNE")
+#----------------------------------------------------------------------------------------------------------------------------------------------
+#Intro to Python @ WINLAB
+#a = -1
+#b = 297
+#c = 10.2
+
+#xp = (-b+((b**2)-4*a*c)**0.5)/(2*a) 
+#xn = (-b-((b**2)-4*a*c)**0.5)/(2*a)
+
+#print (xp)
+#print (xn)
+
+#sum = 0
+#sum1 = 0
+#fibs = []
+#even = []
+#def fibby(a, b):
+#    fibs.append(a)
+#    fibs.append(b)
+#    sum = (a+b)
+#    fibs.append(sum)
+    
+#    while fibs[-1] < 5000000:
+#        sum = fibs[-1] + fibs[-2]
+#        fibs.append(sum)
+
+#    return fibs
+
+#fibby(2,2)
+
+#for i in fibs:
+#    if i%2==0:
+#        even.append(i)
+
+#for i in even:
+#    sum1+=i
+
+#print (sum1)
+ 
+#-------------------------------------------------------------------------------------------------------------------------------------------------
+# file reading 
 
